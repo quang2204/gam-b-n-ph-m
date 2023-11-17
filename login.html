@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="form-container" id="dn">
+      <p class="title">Đăng nhập</p>
+      <form class="form">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="" />
+        </div>
+        <br />
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="" />
+          <div class="forgot">
+            <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+          </div>
+        </div>
+        <br />
+        <button class="sign" type="submit">Sign in</button>
+      </form>
+      <div class="social-message">
+        <div class="line"></div>
+        <p class="message">Login with social accounts</p>
+        <div class="line"></div>
+      </div>
+      <div class="social-icons">
+        <button aria-label="Log in with Google" class="icon">
+          <i class="fa-brands fa-facebook"></i>
+        </button>
+        <button aria-label="Log in with Twitter" class="icon">
+          <i class="fa-brands fa-twitter"></i>
+        </button>
+        <button aria-label="Log in with GitHub" class="icon">
+          <i class="fa-brands fa-github"></i>
+        </button>
+      </div>
+      <p class="signup">
+        Don't have an account?
+        <a rel="noopener noreferrer" href="index.html" class="">Sign up</a>
+      </p>
+    </div>
+    <a href="playgame.html" style="text-decoration: none">
+      <button
+        id="btnPlay"
+        style="
+          display: block;
+          margin: 20px auto;
+          background-color: #191a21;
+          color: #eee;
+          padding: 5px 10px;
+          font-size: large;
+          letter-spacing: 5px;
+          box-shadow: 0 10px 10px #0005;
+          cursor: pointer;
+          display: none;
+        "
+      >
+        Play Game
+      </button>
+    </a>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginForm = document.querySelector(".form");
+        const button = document.getElementById("btnPlay");
+        loginForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const enteredUsername = document.getElementById("username").value;
+          const enteredPassword = document.getElementById("password").value;
+
+          const storedUsername = localStorage.getItem("username");
+          const storedPassword = localStorage.getItem("password");
+
+          if (
+            enteredUsername === storedUsername &&
+            enteredPassword === storedPassword
+          ) {
+            alert("Đăng nhập thành công");
+            button.style.display = "block";
+            // Add redirection logic or any other actions after successful login
+          } else {
+            alert("Sai mật khẩu hoặc tài khoản");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

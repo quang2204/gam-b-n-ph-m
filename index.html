@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="form-container" id="dk">
+      <p class="title">Đăng ký</p>
+      <form class="form" id="registrationForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="" />
+        </div>
+        <br />
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="" />
+          <div class="forgot">
+            <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+          </div>
+        </div>
+        <br />
+        <div class="input-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            placeholder=""
+          />
+          <div class="forgot">
+            <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+          </div>
+        </div>
+        <br />
+        <button class="sign" type="submit">Sign up</button>
+      </form>
+      <div id="successMessage" style="display: none">
+        <p>Đang chuyển trang đến Đăng nhập</p>
+      </div>
+      <p class="signup">
+        Already have an account?
+        <a rel="noopener noreferrer" href="login.html" class="">Log in</a>
+      </p>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
